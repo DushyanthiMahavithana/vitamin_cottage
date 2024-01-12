@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Header() {
   return (
     <header className='flex items-center justify-between'>
-      <Link className='text-4xl text-green-500 px-5 py-2' href={'/'}>VITAMIN COTTAGE</Link>
+      <Link className='text-4xl text-green-500 py-2' href={'/'}>VITAMIN COTTAGE</Link>
       <nav className='flex items-center gap-10 font-semibold'>
         <Link href={'/'}>Home</Link>
         <Link href={'/menu'}>Menu</Link>
