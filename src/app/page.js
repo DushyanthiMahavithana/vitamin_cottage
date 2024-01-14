@@ -15,7 +15,7 @@ export default function Home() {
       <p className="font-mono mb-10">Drink good, live good</p>
       <p className="font-mono mb-10">Drinking fruit juice is always beneficial because you would find all the nutrients in it and you would also remain hydrated. You can experience the overall health of your body. Drinking fruit juice can boost the immune system and also be a health promoter and disease prevention as well.</p>
       <Link href={'/'}>
-        <button className='bg-green-500 px-8 py-2 rounded-lg font-mono mb-10'>Order now</button>
+        <button className='bg-green-500 px-8 py-2 rounded-lg font-mono mb-10'>ORDER NOW</button>
       </Link>
       <Image src={HomeImage1}></Image>
     </div>
@@ -24,27 +24,21 @@ export default function Home() {
     <div className="relative max-w-full overflow-x-hidden mt-10">
       <Image src={HomeImage2} width={1600} ></Image>
       <div className='absolute top-1/3 left-1/3 transform-translate-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white'>
-            <p className='mt-80 font-mono text-left'>Welcome to the</p>
-            <h1 className='font-mono text-3xl mb-10 text-left'>Animal Kingdom</h1>
-            <p className='font-mono mx-auto mb-10 text-left'>We're delighted to present a revolutionary pet food experience designed to elevate your furry friend's well-being. Our commitment to excellence is embedded in every kibble, promising a feast of flavors and nourishment that goes beyond the bowl.</p>
-            <div className="mb-10 text-left font-mono">
-            <p>- dfdfdfdfdfdfdfd</p>
-            <p>- dfdfdfdfdfdfdfd</p>
-            <p>- dfdfdfdfdfdfdfd</p>
-            <p>- dfdfdfdfdfdfdfd</p>
-            <p>- dfdfdfdfdfdfdfd</p>
-            </div>
-            <div className="text-left">
-            <Link href={"/#"}>  
-            <button className= 'bg-green-500 px-8 py-2 rounded-lg font-mono mb-10'>SHOP NOW</button>
-            </Link>
-            </div>
-            </div>
-
+        <p className='mt-80 font-mono text-left'>Sip, smile, repeat.</p>
+        <h1 className='font-mono text-3xl mb-10 text-left'>Juice-tastic Day ahead!</h1>
+        <p className='font-mono mx-auto mb-10 text-left'>Nutrients vary widely depending on the fruits and vegetables you use for juicing and whether you buy the juice or make your own at home.</p>
+        <div className="mb-10 text-left font-mono">
+          <p>- Diets high in fruits are widely recommended.</p>
+          <p>- Fruits have historically held a place in dietary guidance.</p>
+          <p>- concentrations of vitamins,vitamins C and A; minerals</p>
+        </div>
+        <div className="text-left">
+          <Link href={"/#"}>
+            <button className= 'bg-green-500 px-8 py-2 rounded-lg font-mono mb-10'>READ MORE</button>
+          </Link>
+        </div>
+      </div>
     </div>
-  </div>
-  
-    
-    
+  </div>  
   )
 }

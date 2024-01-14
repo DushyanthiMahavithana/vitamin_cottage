@@ -12,7 +12,7 @@ export default function HomepageMenu() {
       <Image src={menuhome.image} width={300} height={200} className="mb-4 rounded-md"></Image>
       <h2 className=' text-gray-600 mb-2 font-mono'>{menuhome.name}</h2>
         <div>
-          <button className='bg-green-500 px-8 py-2 rounded-lg font-mono'>Quick View</button>
+          <button className='bg-green-500 px-8 py-2 rounded-lg font-mono'>QUICK VIEW</button>
         </div>
     </div>
     ))}

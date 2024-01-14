@@ -10,7 +10,7 @@ export default function Header() {
         <Link href={'/menu'}>Menu</Link>
         <Link href={'/about'}>About Us</Link>
         <Link href={'/contact'}>Contact</Link>
-        <Link className='bg-green-500 px-8 py-2 rounded-lg' href={'/login'}>Login</Link>
+        <Link className='bg-green-500 px-8 py-2 rounded-lg' href={'/login'}>LOGIN</Link>
       </nav>
     </header>
   )
