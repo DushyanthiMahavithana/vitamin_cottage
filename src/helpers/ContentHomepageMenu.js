@@ -4,9 +4,21 @@ const data = [
     {
         id:1,
         image:menu1 ,
-        name:"Pedigree Chicken with Rice",
-        price:"$12.19", 
+        name:"Mango Juice",
 
     },
+    {
+        id:2,
+        image:menu1 ,
+        name:"Mango Juice",
+
+    },
+    {
+        id:3,
+        image:menu1 ,
+        name:"Mango Juice",
+
+    },
+    
 ];
 export default data;
