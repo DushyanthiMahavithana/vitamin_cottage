@@ -10,9 +10,9 @@ export default function HomepageMenu() {
     {ContentHomeMenu.map(menuhome =>(
     <div key={menuhome.id} className="bg-gray-200 p-4 rounded-lg text-center">
       <Image src={menuhome.image} width={300} height={200} className="mb-4 rounded-md"></Image>
-      <h2 className=' text-gray-600 mb-2'>{menuhome.name}</h2>
+      <h2 className=' text-gray-600 mb-2 font-mono'>{menuhome.name}</h2>
         <div>
-          <button className='bg-green-500 px-8 py-2 rounded-lg'>Quick view</button>
+          <button className='bg-green-500 px-8 py-2 rounded-lg font-mono'>Quick View</button>
         </div>
     </div>
     ))}
