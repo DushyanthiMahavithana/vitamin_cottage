@@ -11,10 +11,10 @@ export default function Footer() {
     <div className="grid grid-cols-4 gap-8 p-8 font-mono text-white">
     <div className="col-span-1 mt-8">
         <Link className='text-4xl text-green-500 py-2 font-mono' href={'/'}>VITAMIN COTTAGE</Link>
-        <h1 className="ml-4 text-xl font-bold mt-5"><b>Contact</b></h1><br></br>
-        <p className="ml-4 hover:text-gray-400"><Link href={"/#"}> 11/1 Greene St, Colombo.</Link></p><br></br> 
-        <p className="ml-4 hover:text-gray-400"><Link href={"mailto:vitamincottage2gmail.com"}>vitamincottage@gmail.com</Link></p> 
-        <p className="ml-4 hover:text-gray-400"><Link href={"tel:+94 71 123 4567"}>+94 71 123 4567</Link></p> 
+        <h1 className="ml-1 text-xl font-bold mt-5"><b>Contact</b></h1><br></br>
+        <p className="ml-1 hover:text-gray-400"><Link href={"/#"}> 11/1 Greene St, Colombo.</Link></p><br></br> 
+        <p className="ml-1 hover:text-gray-400"><Link href={"mailto:vitamincottage2gmail.com"}>vitamincottage@gmail.com</Link></p> 
+        <p className="ml-1 hover:text-gray-400"><Link href={"tel:+94 71 123 4567"}>+94 71 123 4567</Link></p> 
     </div>
     <div className="col-span-1 mt-8">
         <h1 className="text-xl font-bold ml-4">About</h1><br></br>
