@@ -6,6 +6,7 @@ import HomeImage1 from '../images/homepageimage1.jpg'
 import HomeImage2 from '../images/homepageimage2.jpg'
 import HomepageMenu from "@/components/HomepageMenu"
 import SectionHeaders from "@/components/SectionHeaders"
+import { ButtonDemo } from "@/components/Button"
 
 
 export default function Home() {
@@ -21,9 +22,11 @@ export default function Home() {
       paragraph={'Drinking fruit juice is always beneficial because you would find all the nutrients in it and you would also remain hydrated. You can experience the overall health of your body. Drinking fruit juice can boost the immune system and also be a health promoter and disease prevention as well.'}> 
       </SectionHeaders>
       
-      <Link href={'/'}>
-        <button className='bg-green-500 px-8 py-2 rounded-lg font-mono mb-10  hover:text-gray-400 hover:bg-green-600'>ORDER NOW</button>
-      </Link>
+      <ButtonDemo 
+        button_name={'ORDER NOW'}
+        button_link={'/#'}>
+      </ButtonDemo>
+
       <Image src={HomeImage1}></Image>
     </div>
     <div className="text-center">
@@ -32,6 +35,7 @@ export default function Home() {
       </SectionHeaders>
 
       <HomepageMenu />
+
     </div>
     
     <div className="relative max-w-full overflow-x-hidden mt-10">
@@ -51,9 +55,12 @@ export default function Home() {
         </div>
         
         <div className="text-left">
-          <Link href={"/#"}>
-            <button className='bg-green-500 px-8 py-2 rounded-lg font-mono mb-10  hover:text-gray-400 hover:bg-green-600'>READ MORE</button>
-          </Link>
+
+        <ButtonDemo 
+        button_name={'READ MORE'}
+        button_link={'/#'}>
+        </ButtonDemo>
+
         </div>
       </div>
     </div>

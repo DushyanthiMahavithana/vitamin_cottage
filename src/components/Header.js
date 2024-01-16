@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ButtonDemo } from './Button'
 
 export default function Header() {
   return (
@@ -14,7 +15,12 @@ export default function Header() {
       </nav>
       <nav className='flex items-center gap-4 font-semibold font-mono'>
         <Link className=' hover:text-gray-400' href={'/login'}>login</Link>
-        <Link className='bg-green-500 px-8 py-2 rounded-lg hover:text-gray-400 hover:bg-green-600' href={'/register'}>REGISTER</Link>
+
+        <ButtonDemo 
+        button_name={'REGISTER'}
+        button_link={'/register'}>
+        </ButtonDemo>
+        
       </nav>
     </header>
   )
