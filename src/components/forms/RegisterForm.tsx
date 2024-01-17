@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input"
 import React from "react"
 import GoogleLogin from "./GoogleLogin"
+import { useRouter } from "next/navigation"
 
 const FormSchema = z
 .object({
@@ -39,15 +40,31 @@ const FormSchema = z
 });
 
 const InputForm = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     
   });
 
-  const onSubmit = (values:z.infer<typeof FormSchema>) => {
-    console.log(values);
+  const onSubmit =  async (values:z.infer<typeof FormSchema>) => {
+    const response = await fetch('/api/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify({
+        username: values.username,
+        email: values.email,
+        password: values.password
+      })
+    });
+    if(response.ok){
+      router.push('/login')
+    }else{
+      console.error('Registration Failed')
+    }
 
-  }
+  };
     
 
   return (
