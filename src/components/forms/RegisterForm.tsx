@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import React from "react"
+import GoogleLogin from "./GoogleLogin"
 
 const FormSchema = z
 .object({
@@ -128,6 +129,7 @@ const InputForm = () => {
       <div className="w-2/3 mx-auto my-4 flex items-center justify-evenly before:mr-4 before:block before:h-px before:flex-grow before:bg-stone-400 after:ml-4 after:block after:h-px after:flex-grow after:bg-stone-400">
         or
       </div>
+      <GoogleLogin/>
       <p className="w-2/3 space-y-6 mx-auto mb-20">If you already have an account, please&nbsp;<Link className="text-green-500 hover:underline" href='/login'>Login</Link></p>
     </Form>
   )
