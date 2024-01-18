@@ -18,6 +18,8 @@ import {
 import { Input } from "@/components/ui/input"
 import React from "react"
 import GoogleLogin from "./GoogleLogin"
+import {signIn} from 'next-auth/react'
+import { useRouter } from "next/navigation"
 
 const FormSchema = z.object({
   username:z.string().min(1, 'Username is Required'),
@@ -30,15 +32,27 @@ const FormSchema = z.object({
 });
 
 const LoginForm = () => {
+  const router = useRouter( )
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     
   });
 
-  const onSubmit = (values:z.infer<typeof FormSchema>) => {
-    console.log(values);
+  const onSubmit = async (values:z.infer<typeof FormSchema>) => {
+    const loginData = await signIn('credentials',{
+      username: values.username,
+      password: values.password,
+      redirect: false,
+    });
 
-  }
+    if(loginData?.error){
+      console.log(loginData.error);
+    }else{
+      router.push('/profile');
+    }
+   
+
+  };
     
 
   return (
