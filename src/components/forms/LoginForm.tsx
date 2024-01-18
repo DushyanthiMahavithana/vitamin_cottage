@@ -1,5 +1,6 @@
 "use client"
 
+
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -20,6 +21,8 @@ import React from "react"
 import GoogleLogin from "./GoogleLogin"
 import {signIn} from 'next-auth/react'
 import { useRouter } from "next/navigation"
+import { useToast } from "@/components/ui/use-toast"
+
 
 const FormSchema = z.object({
   username:z.string().min(1, 'Username is Required'),
@@ -33,6 +36,7 @@ const FormSchema = z.object({
 
 const LoginForm = () => {
   const router = useRouter( )
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     
@@ -46,7 +50,10 @@ const LoginForm = () => {
     });
 
     if(loginData?.error){
-      console.log(loginData.error);
+      toast({
+        title: "Error",
+        description: "Something Went Wrong",
+      })
     }else{
       router.refresh();
       router.push('/profile');

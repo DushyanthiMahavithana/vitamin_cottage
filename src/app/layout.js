@@ -3,6 +3,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import HeaderInfo from '@/components/HeaderInfo'
 import Footer from '@/components/Footer'
+import { Toaster } from '@/components/ui/toaster'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400','500','700'] })
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <main className='mx-auto max-w-4xl'>
           <HeaderInfo/>
           <Header/>
+          <Toaster />
            {children}
           <Footer/>
         </main>
