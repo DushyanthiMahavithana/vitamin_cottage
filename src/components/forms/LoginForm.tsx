@@ -48,6 +48,7 @@ const LoginForm = () => {
     if(loginData?.error){
       console.log(loginData.error);
     }else{
+      router.refresh();
       router.push('/profile');
     }
    

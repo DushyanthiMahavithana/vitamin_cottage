@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { ButtonDemo } from './Button'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '@/lib/auth'
+import SignoutUser from './SignoutUser';
 
-export default function Header() {
+export default async function Header() {
+  const session = await getServerSession (authOptions);
+
   return (
     <header className='flex items-center justify-between'>
       <Link className='text-4xl text-green-500 py-2 font-mono' href={'/'}>VITAMIN COTTAGE</Link>
@@ -14,7 +19,13 @@ export default function Header() {
         
       </nav>
       <nav className='flex items-center gap-4 font-semibold font-mono'>
-        <Link className=' hover:text-gray-400' href={'/login'}>login</Link>
+        {session?.user ? (
+          <SignoutUser/>
+          
+  
+        ) : (
+          <Link className=' hover:text-gray-400' href={'/login'}>Login</Link>
+        )}
 
         <ButtonDemo 
         button_name={'REGISTER'}
@@ -25,5 +36,7 @@ export default function Header() {
     </header>
   )
 }
+
+
 
 
