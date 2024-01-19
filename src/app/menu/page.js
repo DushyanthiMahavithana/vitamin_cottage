@@ -15,7 +15,7 @@ const MenuPage = () => {
       <Category1/>
       </div>
 
-      <SectionHeaders mainheader={'Category 2'}></SectionHeaders>
+      <SectionHeaders mainheader={'Smoothies'}></SectionHeaders>
       <div className='mb-20'>
       <Category2/>
       </div>
