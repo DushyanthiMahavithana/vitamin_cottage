@@ -9,22 +9,27 @@ const MenuPage = () => {
   return (
     <>
     <div className='text-center mt-20'>
-      <SectionHeaders mainheader={'Category 1'}></SectionHeaders>
-      <div>
+      
+      <SectionHeaders mainheader={'Fresh Fruit Juice'}></SectionHeaders>
+      <div className='mb-20'>
       <Category1/>
       </div>
+
       <SectionHeaders mainheader={'Category 2'}></SectionHeaders>
-      <div>
+      <div className='mb-20'>
       <Category2/>
       </div>
+
       <SectionHeaders mainheader={'Category 3'}></SectionHeaders>
-      <div>
+      <div className='mb-20'>
       <Category3/>
       </div>
+
       <SectionHeaders mainheader={'Category 4'}></SectionHeaders>
-      <div>
+      <div className='mb-20'>
       <Category4/>
       </div>
+
     </div>
     </>
   );

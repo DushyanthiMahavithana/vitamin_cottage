@@ -1,24 +1,38 @@
-import BestSellerMenu1 from '../images/green-avocado-milkshake.jpg'
-import BestSellerMenu2 from '../images/mango-smoothie-milkshake.jpg'
-import BestSellerMenu3 from '../images/strawberry-smoothie-with-vanilla-icecream.jpg'
+import FruitJuice1 from '../images/FreshFruitJuice/mango-juice.jpg'
+import FruitJuice2 from '../images/FreshFruitJuice/papaya-juice.jpg'
+import FruitJuice3 from '../images/FreshFruitJuice/lime-juice.jpg'
+import FruitJuice4 from '../images/FreshFruitJuice/passion-fruit-juice.jpg'
+import FruitJuice5 from '../images/FreshFruitJuice/stawberry-juice.jpg'
 
 const data = [
     {
         id:1,
-        image:BestSellerMenu1 ,
-        name:"Avocado Milkshake",
+        image:FruitJuice1,
+        name:"Mango Juice",
 
     },
     {
         id:2,
-        image:BestSellerMenu2 ,
-        name:"Mango Smoothie Milkshake",
+        image:FruitJuice2,
+        name:"Papaya Juice",
 
     },
     {
         id:3,
-        image:BestSellerMenu3 ,
-        name:"Strawberry Smoothie with Vanilla Icecream",
+        image:FruitJuice3,
+        name:"Lime Juice",
+
+    },
+    {
+        id:4,
+        image:FruitJuice4,
+        name:"Passion Fruit Juice",
+
+    },
+    {
+        id:5,
+        image:FruitJuice5,
+        name:"Strawberry Juice",
 
     },
     
