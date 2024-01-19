@@ -5,18 +5,12 @@ import BestSellerMenu3 from '../images/strawberry-smoothie-with-vanilla-icecream
 const data = [
     {
         id:1,
-        image:BestSellerMenu1 ,
-        name:"Avocado Milkshake",
-
-    },
-    {
-        id:2,
         image:BestSellerMenu2 ,
         name:"Mango Smoothie Milkshake",
 
     },
     {
-        id:3,
+        id:2,
         image:BestSellerMenu3 ,
         name:"Strawberry Smoothie with Vanilla Icecream",
 

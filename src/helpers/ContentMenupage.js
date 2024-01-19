@@ -9,18 +9,7 @@ const data = [
         name:"Avocado Milkshake",
 
     },
-    {
-        id:2,
-        image:BestSellerMenu2 ,
-        name:"Mango Smoothie Milkshake",
-
-    },
-    {
-        id:3,
-        image:BestSellerMenu3 ,
-        name:"Strawberry Smoothie with Vanilla Icecream",
-
-    },
+    
     
 ];
 export default data;
