@@ -20,12 +20,12 @@ const MenuPage = () => {
       <Category2/>
       </div>
 
-      <SectionHeaders mainheader={'Category 3'}></SectionHeaders>
+      <SectionHeaders mainheader={'Milkshakes'}></SectionHeaders>
       <div className='mb-20'>
       <Category3/>
       </div>
 
-      <SectionHeaders mainheader={'Category 4'}></SectionHeaders>
+      <SectionHeaders mainheader={'Mojito'}></SectionHeaders>
       <div className='mb-20'>
       <Category4/>
       </div>

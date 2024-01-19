@@ -4,6 +4,8 @@ import Smoothie2 from '../images/Smoothies/mango-lassi-smoothie.jpg'
 import Smoothie3 from '../images/Smoothies/blueberry-smoothie.jpg'
 import Smoothie4 from '../images/Smoothies/pumpkin-smoothie.jpg'
 import Smoothie5 from '../images/Smoothies/strawberry-coconut-smoothie.jpg'
+import Smoothie6 from '../images/strawberry-smoothie-with-vanilla-icecream.jpg'
+
 
 const data = [
     {
@@ -36,7 +38,12 @@ const data = [
         name:"Strawberry Coconut Smoothie",
 
     },
-    
+    {
+        id:6,
+        image:Smoothie6 ,
+        name:"Strawberry Smoothie with Vanilla Icecream",
+
+    },
     
 ];
 export default data;
