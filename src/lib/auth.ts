@@ -3,6 +3,7 @@ import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { db } from "./db";
 import {compare as bcryptCompare} from 'bcrypt'
+import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions : NextAuthOptions = {
   adapter:PrismaAdapter(db),
@@ -15,7 +16,13 @@ export const authOptions : NextAuthOptions = {
 
   },
   
+  
     providers: [
+        GoogleProvider({
+          clientId: process.env.GOOGLE_CLIENT_ID!,
+          clientSecret: process.env.GOOGLE_CLIENT_SECRET!
+        }),
+      
         CredentialsProvider({
           // The name to display on the sign in form (e.g. "Sign in with...")
           name: "Credentials",
