@@ -12,7 +12,7 @@ const Singleproduct = ({isVisible, onClose, children}) => {
     id='wrapper' 
     onClick={handleClose}>
         <div className='w-[600px] flex flex-col'>
-            <button className='text-white text-xl place-self-end' onClick={()=>onClose()}>x</button>
+            <button className='text-white text-xl place-self-end font-mono' onClick={()=>onClose()}>x</button>
         <div className='bg-white text-black p-2 rounded-md'>{children}</div>
         </div>
      
