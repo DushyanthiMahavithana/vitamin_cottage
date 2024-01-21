@@ -9,35 +9,40 @@ const data = [
         id:1,
         image:FruitJuice1,
         name:"Mango Juice",
-        price: 260
+        price: 260,
+        price2: 500  // 600ml    
 
     },
     {
         id:2,
         image:FruitJuice2,
         name:"Papaya Juice",
-        price: 260
+        price: 260,
+        price2: 500  // 600ml
 
     },
     {
         id:3,
         image:FruitJuice3,
         name:"Lime Juice",
-        price: 260
+        price: 260,
+        price2: 500  // 600ml
 
     },
     {
         id:4,
         image:FruitJuice4,
         name:"Passion Fruit Juice",
-        price: 260
+        price: 260,
+        price2: 500  // 600ml
 
     },
     {
         id:5,
         image:FruitJuice5,
         name:"Strawberry Juice",
-        price: 300
+        price: 300,
+        price2: 500  // 600ml
 
     },
     

@@ -73,7 +73,7 @@ const MenuPage = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">600 ml</Label>
+                <Label htmlFor="option-two">600 ml LKR {selectedMenu.price2}</Label>
               </div>
             </RadioGroup>
             </div>
