@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import HeaderInfo from '@/components/HeaderInfo'
 import Footer from '@/components/Footer'
 import { Toaster } from '@/components/ui/toaster'
+import Provider from '../redux/provider'
 
 const roboto = Roboto({ subsets: ['latin'], weight: ['400','500','700'] })
 
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={roboto.className}>
         <main className='mx-auto max-w-4xl'>
+        <Provider>
           <HeaderInfo/>
           <Header/>
           <Toaster />
            {children}
           <Footer/>
+          </Provider>
         </main>
         </body>
     </html>

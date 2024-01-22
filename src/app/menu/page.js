@@ -17,6 +17,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { ButtonMenu } from '../../components/Menubuttons';
+import {useDispatch} from 'react-redux'
+import {add} from '../../redux/cartSlice'
+
 
 
 
@@ -24,12 +28,23 @@ import {
 const MenuPage = () => {
   const [showSingle, setSingle] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const dispatch = useDispatch();
 
+  
   
   const handleQuickViewClick = (menu) => {
     setSingle(true);
     setSelectedMenu(menu);
   };
+
+  const handled = (product) =>{
+    dispatch(add(product));
+
+  }
+
+  
+
+
   return (
     <>
     <div className='text-center mt-20'>
@@ -92,10 +107,10 @@ const MenuPage = () => {
               </SelectContent>
             </Select>
             <div className='mt-5'>
-            <ButtonDemo 
+            <ButtonMenu 
             button_name={'ADD TO CART'}
-            button_link={'/#'}>
-            </ButtonDemo>
+            onClick={()=>handled(selectedMenu)}>
+            </ButtonMenu>
             </div>
             <div className='mt-5 mb-10'>
             <ButtonDemo 
