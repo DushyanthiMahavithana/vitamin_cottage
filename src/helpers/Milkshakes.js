@@ -12,51 +12,67 @@ import Milkshake8 from '../images/mango-smoothie-milkshake.jpg'
 
 const data = [
     {
-        id:1,
+        id:3.1,
         image:Milkshake1,
         name:"Chocolate Milkshake",
+        price: 570.00,
+        price2: 1050.00  // 600ml
 
     },
     {
-        id:2,
+        id:3.2,
         image:Milkshake2,
         name:"Vanilla Milkshake",
+        price: 480.00,
+        price2: 900.00  // 600ml
 
     },
     {
-        id:3,
+        id:3.3,
         image:Milkshake3,
         name:"strawberry Milkshake",
+        price: 600.00,
+        price2: 1140.00  // 600ml
 
     },
     {
-        id:4,
+        id:3.4,
         image:Milkshake4,
         name:"Peanut Butter Milkshake",
+        price: 650.00,
+        price2: 1180.00  // 600ml
 
     },
     {
-        id:5,
+        id:3.5,
         image:Milkshake5,
         name:"Oreo Milkshake",
+        price: 650.00,
+        price2: 1180.00  // 600ml
 
     },
     {
-        id:6,
+        id:3.6,
         image:Milkshake6,
         name:"Chocolate Mint Milkshake",
+        price: 600.00,
+        price2: 1140.00  // 600ml
 
     },
     {
-        id:3,
+        id:3.7,
         image:Milkshake7,
         name:"Avacado Milkshake",
+        price: 570.00,
+        price2: 1050.00  // 600ml
 
     },
     {
-        id:3,
+        id:3.8,
         image:Milkshake8,
         name:"Mango Smoothie Milkshake",
+        price: 570.00,
+        price2: 1050.00 // 600ml
 
     },
     

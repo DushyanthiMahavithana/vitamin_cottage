@@ -9,39 +9,51 @@ import Smoothie6 from '../images/strawberry-smoothie-with-vanilla-icecream.jpg'
 
 const data = [
     {
-        id:1,
+        id:2.1,
         image:Smoothie1 ,
         name:"Chocolate Smoothie",
+        price: 960.00,
+        price2: 1500.00  // 600ml
 
     },
     {
-        id:2,
+        id:2.2,
         image:Smoothie2 ,
         name:"Mango Lassi Smoothie",
+        price: 850.00,
+        price2: 1350.00  // 600ml
 
     },
     {
-        id:3,
+        id:2.3,
         image:Smoothie3 ,
         name:"blueberry Smoothie",
+        price: 850.00,
+        price2: 1350.00  // 600ml
 
     },
     {
-        id:4,
+        id:2.4,
         image:Smoothie4 ,
         name:"Pumpkin Smoothie",
+        price: 690.00,
+        price2: 1200.00  // 600ml
 
     },
     {
-        id:5,
+        id:2.5,
         image:Smoothie5 ,
         name:"Strawberry Coconut Smoothie",
+        price: 960.00,
+        price2: 1500.00  // 600ml
 
     },
     {
-        id:6,
+        id:2.6,
         image:Smoothie6 ,
         name:"Strawberry Smoothie with Vanilla Icecream",
+        price: 960.00,
+        price2: 1500.00  // 600ml
 
     },
     

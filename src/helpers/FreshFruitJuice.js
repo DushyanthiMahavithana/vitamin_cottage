@@ -6,43 +6,43 @@ import FruitJuice5 from '../images/FreshFruitJuice/stawberry-juice.jpg'
 
 const data = [
     {
-        id:1,
+        id:1.1,
         image:FruitJuice1,
         name:"Mango Juice",
-        price: 260,
-        price2: 500  // 600ml    
+        price: 360.00,
+        price2: 700.00  // 600ml    
 
     },
     {
-        id:2,
+        id:1.2,
         image:FruitJuice2,
         name:"Papaya Juice",
-        price: 260,
-        price2: 500  // 600ml
+        price: 290.00,
+        price2: 490.00  // 600ml
 
     },
     {
-        id:3,
+        id:1.3,
         image:FruitJuice3,
         name:"Lime Juice",
-        price: 260,
-        price2: 500  // 600ml
+        price: 340.00,
+        price2: 620.00  // 600ml
 
     },
     {
-        id:4,
+        id:1.4,
         image:FruitJuice4,
         name:"Passion Fruit Juice",
-        price: 260,
-        price2: 500  // 600ml
+        price: 410.00,
+        price2: 730.00  // 600ml
 
     },
     {
-        id:5,
+        id:1.5,
         image:FruitJuice5,
         name:"Strawberry Juice",
-        price: 300,
-        price2: 500  // 600ml
+        price: 270.00,
+        price2: 510.00  // 600ml
 
     },
     

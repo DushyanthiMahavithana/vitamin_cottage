@@ -19,6 +19,8 @@ import {
 } from "@/components/ui/select"
 import { ButtonMenu } from '../../components/Menubuttons';
 import {useDispatch} from 'react-redux'
+import {useSelector} from 'react-redux'
+
 import {add} from '../../redux/cartSlice'
 
 
@@ -33,6 +35,8 @@ const MenuPage = () => {
 
   
   const dispatch = useDispatch();
+  const cartItems = useSelector((state) => state.cart);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   
   
@@ -59,9 +63,20 @@ const MenuPage = () => {
   const handled = (product) =>{
     const labelName = sizeLabelMap[selectedSize];
     const labelName2 = numberLabelMap [selectedNumber];
-    dispatch(add({product, selectedSize:labelName,selectedNumber:labelName2 }));
+    const selectedPrice = selectedSize === 'option-one' ? product.price : product.price2; //the price of the selected radio btn 
+    const totalForOne = selectedPrice * parseInt(selectedNumber, 10); 
+  
+    console.log(selectedPrice);
+    console.log(totalForOne);
+
+    dispatch(add({product, selectedSize:labelName,selectedNumber:labelName2, totalForOne  }));
     //dispatch(add(product));
 
+   /* setTotalAmount((prevTotal) => {                       
+      const newTotal = prevTotal + totalForOne;
+      console.log('Total Amount:', newTotal);
+      return newTotal;
+    });*/ 
   }
 
   
@@ -78,17 +93,17 @@ const MenuPage = () => {
 
       <SectionHeaders mainheader={'Smoothies'}></SectionHeaders>
       <div className='mb-20'>
-      <Category2/>
+      <Category2 onQuickViewClick={handleQuickViewClick}/>
       </div>
 
       <SectionHeaders mainheader={'Milkshakes'}></SectionHeaders>
       <div className='mb-20'>
-      <Category3/>
+      <Category3 onQuickViewClick={handleQuickViewClick}/>
       </div>
 
       <SectionHeaders mainheader={'Mojito'}></SectionHeaders>
       <div className='mb-20'>
-      <Category4/>
+      <Category4 onQuickViewClick={handleQuickViewClick}/>
       </div>
       
       <Singleproduct isVisible = {showSingle} onClose={() => setSingle(false)}>
@@ -101,7 +116,7 @@ const MenuPage = () => {
         <div className="flex flex-row">
           <Image src={selectedMenu.image} width={300} height={200} />
           <div className="flex-1 text-left font-mono ml-10">
-            <h2 className='text-lg mb-10'>LKR {selectedMenu.price}</h2>
+            <h2 className='text-lg mb-10'>LKR {selectedMenu.price.toFixed(2)}</h2>
             <div className='mb-10'>
             <RadioGroup value={selectedSize} onValueChange={(value) => setSelectedSize(value)}>
               <div className="flex items-center space-x-2">
@@ -110,7 +125,7 @@ const MenuPage = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">600 ml LKR {selectedMenu.price2}</Label>
+                <Label htmlFor="option-two">600 ml LKR {selectedMenu.price2.toFixed(2)}</Label>
               </div>
             </RadioGroup>
             </div>

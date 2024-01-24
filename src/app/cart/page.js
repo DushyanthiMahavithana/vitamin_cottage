@@ -14,6 +14,7 @@ import {remove} from '../../redux/cartSlice'
 import {useDispatch, useSelector} from 'react-redux'
 import { ButtonMenu } from '../../components/Menubuttons';
 import Image from 'next/image'
+import SectionHeaders from '@/components/SectionHeaders'
 
   
 
@@ -24,11 +25,12 @@ const CartPage = () => {
     const handleremove = (id) =>{
         dispatch(remove(id))
     }
+    const newTotal = cartitems.reduce((acc, item) => acc + item.totalForOne, 0); //total of all items
 
 
 
     return(
-        <div className='mt-20'>
+        <div className='mt-20 mb-52'>
             
                 
 
@@ -45,31 +47,54 @@ const CartPage = () => {
                     </TableRow>
                 </TableHeader>
                 
-            {
-                 cartitems.map((item)=>(
+            
+                 
 
 
                 <TableBody>
-                    <TableRow>
+                {cartitems.map((item)=>(
+                    <TableRow key={item.id}>
                         <TableCell className="font-medium">
                             <Image src={item.image} width={200} height={100}></Image>
                         </TableCell>
                         <TableCell>{item.name}</TableCell>
                         <TableCell>{item.selectedSize}</TableCell>
                         <TableCell>{item.selectedNumber}</TableCell>
-                        <TableCell className="text-right">$250.00</TableCell>
+                        <TableCell className='text-right'>LKR {item.totalForOne.toFixed(2)}</TableCell>
+                        <div className='mt-8 ml-5'>
                         <ButtonMenu
                         button_name={'REMOVE'}
                         onClick={()=>handleremove(item.id)}>
                             
                         </ButtonMenu>
+                        </div>
+                        
 
                       
                     </TableRow>
-                </TableBody>
-                ))
+                    ))
+                    
             }
+                </TableBody>
+                
+               
             </Table>
+
+
+            <div className='my-20 text-center'>
+
+            
+            <SectionHeaders
+            mainheader={"Thanks a Sip Million for Choosing Us...!"}
+            subheader={`Your Total is: LKR ${newTotal.toFixed(2)}`}>
+
+            </SectionHeaders>
+            </div>
+
+           
+            
+
+           
             
         </div>
     )

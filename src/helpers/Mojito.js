@@ -8,27 +8,35 @@ import Mojito4 from '../images/Mojito/mint-mojito.jpg'
 
 const data = [
     {
-        id:1,
+        id:4.1,
         image:Mojito1 ,
         name:"Watermelon Mojito",
+        price: 640.00,
+        price2: 1200.00  // 600ml
 
     },
     {
-        id:2,
+        id:4.2,
         image:Mojito2 ,
         name:"Gin Mojito",
+        price: 700.00,
+        price2: 1350.00  // 600ml
 
     },
     {
-        id:3,
+        id:4.3,
         image:Mojito3 ,
         name:"Strawberry Mojito",
+        price: 700.00,
+        price2: 1350.00  // 600ml
 
     },
     {
-        id:4,
+        id:4.4,
         image:Mojito4 ,
         name:"Mint Mojito",
+        price: 680.00,
+        price2: 1250.00 // 600ml
 
     },
 ];

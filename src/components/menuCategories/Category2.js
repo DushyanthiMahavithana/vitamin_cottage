@@ -1,10 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import Smoothies from '../../helpers/Smoothies'
-import { ButtonDemo } from '../Button'
+import {ButtonMenu} from '../../components/Menubuttons'
 
 
-export default function Category2() {
+export default function Category2({onQuickViewClick}) {
+  const handleQuickViewClick = (menu) => {
+    
+    onQuickViewClick(menu);
+  };
+
   return (
   <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
     {Smoothies.map(menu =>(
@@ -12,10 +17,10 @@ export default function Category2() {
       <Image src={menu.image} width={300} height={200} className="mb-4 rounded-md"></Image>
       <h2 className=' text-gray-600 mb-2 font-mono'>{menu.name}</h2>
         <div>
-        <ButtonDemo 
-        button_name={'QUICK VIEW'}
-        button_link={'/#'}>
-        </ButtonDemo>
+        <ButtonMenu 
+          button_name={'QUICK VIEW'}
+          onClick={() => handleQuickViewClick(menu)}>
+        </ButtonMenu>
         </div>
     </div>
     ))}
