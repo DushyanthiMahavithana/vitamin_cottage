@@ -28,6 +28,10 @@ import {add} from '../../redux/cartSlice'
 const MenuPage = () => {
   const [showSingle, setSingle] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
+  const [selectedSize, setSelectedSize] = useState("option-one");
+  const [selectedNumber, setSelectedNumber] = useState("1");
+
+  
   const dispatch = useDispatch();
 
   
@@ -35,10 +39,28 @@ const MenuPage = () => {
   const handleQuickViewClick = (menu) => {
     setSingle(true);
     setSelectedMenu(menu);
+  };  
+
+  const sizeLabelMap = {
+    "option-one": "200 ml",
+    "option-two": "600 ml",
+    
   };
+  const numberLabelMap ={
+    "1":"1 cup",
+    "2":"2 cups",
+    "3":"3 cups",
+    "4":"4 cups",
+    "5":"5 cups",
+    "6":"6 cups",
+ 
+  }
 
   const handled = (product) =>{
-    dispatch(add(product));
+    const labelName = sizeLabelMap[selectedSize];
+    const labelName2 = numberLabelMap [selectedNumber];
+    dispatch(add({product, selectedSize:labelName,selectedNumber:labelName2 }));
+    //dispatch(add(product));
 
   }
 
@@ -81,7 +103,7 @@ const MenuPage = () => {
           <div className="flex-1 text-left font-mono ml-10">
             <h2 className='text-lg mb-10'>LKR {selectedMenu.price}</h2>
             <div className='mb-10'>
-            <RadioGroup defaultValue="option-one">
+            <RadioGroup value={selectedSize} onValueChange={(value) => setSelectedSize(value)}>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="option-one" id="option-one" />
                 <Label htmlFor="option-one">200 ml</Label>
@@ -93,17 +115,17 @@ const MenuPage = () => {
             </RadioGroup>
             </div>
             
-            <Select>
+            <Select value={selectedNumber} onValueChange={(value)=> setSelectedNumber(value)}>
               <SelectTrigger className="w-[180px] ">
                 <SelectValue placeholder="Number of Cups" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="light">1</SelectItem>
-                <SelectItem value="dark">2</SelectItem>
-                <SelectItem value="system">3</SelectItem>
-                <SelectItem value="light2">4</SelectItem>
-                <SelectItem value="dark2">5</SelectItem>
-                <SelectItem value="system2">6</SelectItem>  
+              <SelectItem value="1">1</SelectItem>
+                <SelectItem value="2">2</SelectItem>
+                <SelectItem value="3">3</SelectItem>
+                <SelectItem value="4">4</SelectItem>
+                <SelectItem value="5">5</SelectItem>
+                <SelectItem value="6">6</SelectItem>  
               </SelectContent>
             </Select>
             <div className='mt-5'>

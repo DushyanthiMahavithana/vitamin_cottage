@@ -12,6 +12,9 @@ import {
 
 import {remove} from '../../redux/cartSlice'  
 import {useDispatch, useSelector} from 'react-redux'
+import { ButtonMenu } from '../../components/Menubuttons';
+import Image from 'next/image'
+
   
 
 const CartPage = () => {
@@ -26,8 +29,8 @@ const CartPage = () => {
 
     return(
         <div className='mt-20'>
-            {
-                cartitems.map((item)=>(
+            
+                
 
                 
             <Table>
@@ -36,20 +39,38 @@ const CartPage = () => {
                     <TableRow>
                         <TableHead className="w-[100px]">Image</TableHead>
                         <TableHead>Name</TableHead>
+                        <TableHead>ml</TableHead>
+                        <TableHead>cups</TableHead>
                         <TableHead className="text-right">Amount</TableHead>
                     </TableRow>
                 </TableHeader>
+                
+            {
+                 cartitems.map((item)=>(
+
+
                 <TableBody>
                     <TableRow>
-                        <TableCell className="font-medium"><img src={item.image}></img></TableCell>
+                        <TableCell className="font-medium">
+                            <Image src={item.image} width={200} height={100}></Image>
+                        </TableCell>
                         <TableCell>{item.name}</TableCell>
+                        <TableCell>{item.selectedSize}</TableCell>
+                        <TableCell>{item.selectedNumber}</TableCell>
                         <TableCell className="text-right">$250.00</TableCell>
-                        <button onClick={()=>handleremove(item.id)}>remove</button>
+                        <ButtonMenu
+                        button_name={'REMOVE'}
+                        onClick={()=>handleremove(item.id)}>
+                            
+                        </ButtonMenu>
+
+                      
                     </TableRow>
                 </TableBody>
-            </Table>
-            ))
+                ))
             }
+            </Table>
+            
         </div>
     )
 
