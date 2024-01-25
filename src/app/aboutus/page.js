@@ -10,10 +10,18 @@ import {
     CarouselNext,
     CarouselPrevious,
   } from "@/components/ui/carousel"
+ import Paul from '../../images/TeamMembers/paul.jpg' 
+ import Julie from '../../images/TeamMembers/julie.jpg' 
+ import Hector from '../../images/TeamMembers/hector.jpg' 
+ import Nicole from '../../images/TeamMembers/nicole.jpg'
+ import Luisa from '../../images/TeamMembers/luisa.jpg'
+ import Hanna from '../../images/TeamMembers/hanna.jpg'   
 
-  const teampic = []
-  const names = ["John", "Alice", "Bob", "Emma", "David"];
-  const positions = ["a", "b", "c" ,"d", "e"];
+
+  
+  const names = ["Paul Smith", "Julie Ross", "Hector Davidson", "Nicole Gray", "Luisa White","Hanna Kennedy"];
+  const positions = ["Director", "Manager", "Senior Chef" ,"Chef", "Junior Chef","Marketing Advicer"];
+  const teampic = [Paul, Julie, Hector, Nicole, Luisa, Hanna];
   
 
 const page = () => {
@@ -49,7 +57,7 @@ const page = () => {
                 <CardContent className="aspect-square items-center justify-center p-2">
                   
                   <Image
-          src={AboutImage}
+          src={teampic[index]}
           width={500}  // Adjust the width as needed
           height={400} // Adjust the height as needed
           className="rounded-sm mb-3" // Apply rounded corners if desired
