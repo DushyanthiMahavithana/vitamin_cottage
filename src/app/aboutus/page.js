@@ -27,7 +27,7 @@ import {
   const teampic = [Paul, Julie, Hector, Nicole, Luisa, Hanna];
   
 
-const page = () => {
+const about = () => {
   return (
     <div className='mb-20'>
     
@@ -111,4 +111,4 @@ const page = () => {
   )
 }
 
-export default page
+export default about

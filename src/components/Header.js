@@ -15,7 +15,7 @@ export default async function Header() {
         <Link className=' hover:text-gray-400' href={'/'}>Home</Link>
         <Link className=' hover:text-gray-400' href={'/menu'}>Menu</Link>
         <Link className=' hover:text-gray-400' href={'/aboutus'}>About Us</Link>
-        <Link className=' hover:text-gray-400' href={'/contact'}>Contact</Link>
+        <Link className=' hover:text-gray-400' href={'/contactus'}>Contact</Link>
         
       </nav>
       <nav className='flex items-center gap-4 font-semibold font-mono'>
