@@ -29,7 +29,7 @@ const page = async() => {
                 </SectionHeaders>
                 <ButtonDemo 
                 button_name={'ORDER NOW'}
-                button_link={'/#'}>
+                button_link={'/menu'}>
                 </ButtonDemo>
             </div>
         </div>

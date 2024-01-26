@@ -13,8 +13,8 @@ export default function HomepageMenu() {
       <h2 className=' text-gray-600 mb-2 font-mono'>{menuhome.name}</h2>
         <div>
         <ButtonDemo 
-        button_name={'QUICK VIEW'}
-        button_link={'/#'}>
+        button_name={'VIEW MORE'}
+        button_link={'/menu'}>
         </ButtonDemo>
         </div>
     </div>
