@@ -24,13 +24,17 @@ export default async function Header() {
           
   
         ) : (
+          <>
           <Link className=' hover:text-gray-400' href={'/login'}>Login</Link>
-        )}
 
-        <ButtonDemo 
+          <ButtonDemo 
         button_name={'REGISTER'}
         button_link={'/register'}>
         </ButtonDemo>
+        </>
+        )}
+
+        
         
       </nav>
     </header>

@@ -152,7 +152,7 @@ const MenuPage = () => {
             <div className='mt-5 mb-10'>
             <ButtonDemo 
             button_name={'VIEW CART'}
-            button_link={'/#'}>
+            button_link={'/cart'}>
             </ButtonDemo>
             </div>
           </div>

@@ -6,6 +6,10 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+
+  import Link from "next/link";
+  import Image from 'next/image'
+  import contactImage from '../../images/contact-img.jpg'
   
 
 const contact = () => {
@@ -47,6 +51,17 @@ We accept cash, credit cards, and mobile payments such as Apple Pay and Google P
 </Accordion>
 
     </div>
+    <div className='font-mono mt-20 text-center'>
+     <SectionHeaders 
+     mainheader={" Your Guide to Reach Us "}>
+
+     </SectionHeaders>
+        
+        <p className="ml-1 hover:text-gray-400 "><Link href={"/#"}> 11/1 Greene St, Colombo.</Link></p>
+        <p className="ml-1 hover:text-gray-400"><Link href={"mailto:vitamincottage2gmail.com"}>vitamincottage@gmail.com</Link></p> 
+        <p className="ml-1 hover:text-gray-400"><Link href={"tel:+94 71 123 4567"}>+94 71 123 4567</Link></p> 
+    </div>
+    <Image src={contactImage}></Image>
     </div>
   )
 }

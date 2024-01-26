@@ -18,16 +18,16 @@ export default function Footer() {
     </div>
     <div className="col-span-1 mt-8">
         <h1 className="text-xl font-bold ml-4">About</h1><br></br>
-        <Link href={"/#"}><p className="ml-4 hover:text-gray-400">About Us</p></Link>
+        <Link href={"/aboutus"}><p className="ml-4 hover:text-gray-400">About Us</p></Link>
         <Link href={"/#"}><p className="ml-4 hover:text-gray-400">Privacy Policy</p></Link>
         <Link href={"/#"}><p className="ml-4 hover:text-gray-400">Terms & Conditions</p></Link>
-        <Link href={"/#"}><p className="ml-4 hover:text-gray-400">Contact Us</p></Link>
+        <Link href={"/contactus"}><p className="ml-4 hover:text-gray-400">Contact Us</p></Link>
         <p></p>
     </div>
     <div className="col-span-1 mt-8 ">
     <h1 className="text-xl font-bold ml-4">My Account</h1><br></br>
-        <Link href={"/#"}><p className="ml-4 hover:text-gray-400">Sign In</p></Link>
-        <Link href={"/#"}><p className="ml-4 hover:text-gray-400">View Cart</p></Link>
+        <Link href={"/login"}><p className="ml-4 hover:text-gray-400">Sign In</p></Link>
+        <Link href={"/cart"}><p className="ml-4 hover:text-gray-400">View Cart</p></Link>
         <Link href={"/#"}><p className="ml-4 hover:text-gray-400">Help</p></Link>   
     </div>
     <div className="col-span-1 mt-8" >

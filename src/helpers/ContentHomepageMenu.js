@@ -4,21 +4,27 @@ import BestSellerMenu3 from '../images/strawberry-smoothie-with-vanilla-icecream
 
 const data = [
     {
-        id:1,
+        id:3.7,
         image:BestSellerMenu1 ,
         name:"Avocado Milkshake",
+        price: 570.00,
+        price2: 1050.00  // 600ml 
 
     },
     {
-        id:2,
+        id:3.8,
         image:BestSellerMenu2 ,
         name:"Mango Smoothie Milkshake",
+        price: 570.00,
+        price2: 1050.00  // 600ml 
 
     },
     {
-        id:3,
+        id:2.6,
         image:BestSellerMenu3 ,
         name:"Strawberry Smoothie with Vanilla Icecream",
+        price: 960.00,
+        price2: 1500.00  // 600ml 
 
     },
     

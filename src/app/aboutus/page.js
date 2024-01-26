@@ -99,7 +99,7 @@ const about = () => {
 
         <ButtonDemo 
         button_name={'CONTACT US'}
-        button_link={'/#'}>
+        button_link={'/contactus'}>
         </ButtonDemo>
 
         </div>

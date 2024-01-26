@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link'
 import {useSelector} from 'react-redux';
+import { FaCartShopping } from "react-icons/fa6";
 
 
 export default function HeaderInfo() {
@@ -27,7 +28,7 @@ export default function HeaderInfo() {
             <p className='px-5  hover:text-gray-400'><Link href={'/#'}>Facebook</Link></p>
             <p>|</p>
             <p className='px-5  hover:text-gray-400'><Link href={'/#'}>Instagram</Link></p>
-            <p className='px-7  hover:text-gray-400'><Link href={'/cart'}>cart <span>{itemCount}</span></Link></p>
+            <p className='px-7  hover:text-gray-400'><Link href={'/cart'} className='flex'><FaCartShopping/> <span>{itemCount}</span></Link></p>
         </div>
     </div>
   )

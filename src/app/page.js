@@ -24,7 +24,7 @@ export default function Home() {
       
       <ButtonDemo 
         button_name={'ORDER NOW'}
-        button_link={'/#'}>
+        button_link={'/menu'}>
       </ButtonDemo>
 
       <Image src={HomeImage1}></Image>
@@ -57,8 +57,8 @@ export default function Home() {
         <div className="text-left">
 
         <ButtonDemo 
-        button_name={'READ MORE'}
-        button_link={'/#'}>
+        button_name={'CONTACT US'}
+        button_link={'/contactus'}>
         </ButtonDemo>
 
         </div>
